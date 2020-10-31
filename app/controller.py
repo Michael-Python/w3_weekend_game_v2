@@ -11,12 +11,17 @@ def index():
 def return_results():
     selection_1 = request.form['selection1']
     selection_2 = request.form['selection2']
+    space = " "
+    full_stop = ". "
+    player_1 = "Player 1 chose "
+    player_2 = ". Player 2 chose "
+    comma = ", "
+
     for game in games:
         if  selection_1 == game["selection_1"] and selection_2 == game["selection_2"]:
-            result = game["result"]
-            print(f"Player 1 {result} Player 2.")
+            result = player_1 + selection_1 + player_2 + selection_2 + full_stop + selection_1.title() +space+ game["result"] +space+ selection_2 + full_stop
         else:
             pass
     return result
     
-    return render_template('/', games = games[selection_1, result, selection_2])
+    # return render_template('/', games = games[selection_1, result, selection_2])
