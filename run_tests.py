@@ -1,5 +1,5 @@
 import unittest
-from player_test import TestPlayer
+from test_player import TestPlayer
 
 if __name__ == '__main__':
     unittest.main()

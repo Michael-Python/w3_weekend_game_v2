@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
@@ -12,8 +12,30 @@
     </header>
     <main>
         <h3>
-            Click <a href=""></a>
+            Choose an option for player 1 and choose an option for player 2.
         </h3>
+        <form action="/rock/scissors" method="post">
+            <p>
+                <label for="selection1">Player 1, choose Rock, Paper or Scissors.</label>
+                <input type="text" name="selection1" id="selectionrock1">
+
+            </p>
+            <p>
+                <label for="selection2">Player 2, choose Rock, Paper or Scissors.</label>
+                <input type="text" name="selection2" id="selection2">
+            </p>
+            <input type="submit" value ="Return result">
+            {% for player in players %}
+                gaaplayer[0] == selection1 and player[1] == selection2 %}
+                    <h3>Player 1 chose {{selection1}}.</h3>
+                    <h3>Player 2 chose {{selection2}}.</h3>
+                    <h3>Player 1 {{player[2]}} Player 2.</h3>
+                {% endif %}
+            {% endfor %}
+
+
+            
+        </form>
     </main>
     <footer></footer>
     
