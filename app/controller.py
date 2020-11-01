@@ -1,13 +1,13 @@
 from flask import render_template, request, redirect
 from app import app
-from app.models.players import games
+from app.models.game import games
 from app.models.player import Player
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/rock/scissors', methods=['GET', 'POST'])
+@app.route('/get_result', methods=['GET', 'POST'])
 def return_results():
     selection_1 = request.form['selection1']
     selection_2 = request.form['selection2']
@@ -16,7 +16,6 @@ def return_results():
     player_1 = request.form['username1']
     chose = " chose "
     player_2 = request.form['username2']
-    comma = ", "
 
     # Investigate classes, again!!
     # player1 = Player(None)

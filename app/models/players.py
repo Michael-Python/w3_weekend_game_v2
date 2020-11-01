@@ -1,26 +1,15 @@
-from app.models.player import *
+from game import *
 
-games = [
-    { "selection_1" : "rock", "selection_2" : "paper", "result" : "lost to"},
-    { "selection_1" : "rock", "selection_2" : "scissors", "result" : "won against"},
-    { "selection_1" : "rock", "selection_2" : "rock", "result" : "tied with"},
-    { "selection_1" : "paper", "selection_2" : "paper", "result" : "tied with"},
-    { "selection_1" : "paper", "selection_2" : "scissors", "result" : "lost to"},
-    { "selection_1" : "paper", "selection_2" : "rock", "result" : "won against"},
-    { "selection_1" : "scissors", "selection_2" : "paper", "result" : "won against"},
-    { "selection_1" : "scissors", "selection_2" : "scissors", "result" : "tied with"},
-    { "selection_1" : "scissors", "selection_2" : "rock", "result" : "lost to"}
-]
+game = Game("rock", "paper", "lost to")
+print(game.result)
 
-# tried a list, not successful
-# player_1 = Player("rock", "paper", "lost to ")
-# player_2 = Player("rock", "scissors", "won against ")
-# player_3 = Player("rock", "rock", "tied with ")
-# player_4 = Player("paper", "rock", "won against ")
-# player_5 = Player("paper", "scissors", "lost to ")
-# player_6 = Player("paper", "paper", "tied with ")
-# player_7 = Player("scissors", "rock", "lost to ")
-# player_8 = Player("scissors", "scissors", "tied with ")
-# player_9 = Player("scissors", "paper", "won against ")
+def get_player_1_choice(self):
+    return self.selection_1[3]
 
-# players = [player_1, player_2, player_3, player_4, player_5, player_6, player_7, player_8, player_9]
+def get_player_2_choice(self):
+    return self.selection_2
+
+def get_result(self):
+    return self.result
+
+# print(get_player_1_choice(games[3]), get_player_2_choice(games[3]), get_result(games[3]))
