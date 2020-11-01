@@ -13,13 +13,28 @@ def return_results():
     selection_2 = request.form['selection2']
     space = " "
     full_stop = ". "
-    player_1 = "Player 1 chose "
-    player_2 = ". Player 2 chose "
+    player_1 = request.form['username1']
+    chose = " chose "
+    player_2 = request.form['username2']
     comma = ", "
+
+    # Investigate classes, again!!
+    # player1 = Player(None)
+#     player2 = Player(None)
+#     Player.selection_1 = request.form['selection1']
+    
+#     player.name = request.form["name"]
+#     Player.selection_2 = request.form['selection2']
+#     space = " "
+#     full_stop = ". "
+#     player_1 = request.form['username1']
+#     chose = " chose "
+#     player_2 = request.form['username2']
+#     comma = ", "
 
     for game in games:
         if  selection_1 == game["selection_1"] and selection_2 == game["selection_2"]:
-            result = player_1 + selection_1 + player_2 + selection_2 + full_stop + selection_1.title() +space+ game["result"] +space+ selection_2 + full_stop
+            result = player_1 + chose + selection_1 + full_stop + player_2 + chose + selection_2 + full_stop + selection_1.title() +space+ game["result"] +space+ selection_2 + full_stop
         else:
             pass
     return result
